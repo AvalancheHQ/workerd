@@ -61,6 +61,7 @@ jobs:
         uses: CodSpeedHQ/action@v3
         with:
           run: ./run_benchmarks.sh
+          upload-url: https://api.staging.preview.codspeed.io/upload
 
       - name: Bazel shutdown
         run: bazel shutdown
