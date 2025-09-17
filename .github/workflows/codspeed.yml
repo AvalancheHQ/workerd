@@ -12,6 +12,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 concurrency:
   group: codspeed.yml-${{ github.event.pull_request.number || github.run_id }}
