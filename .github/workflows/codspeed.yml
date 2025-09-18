@@ -25,7 +25,8 @@ permissions:
 jobs:
   benchmarks:
     name: Run benchmarks
-    runs-on: codspeed-macro-staging
+    runs-on: ubuntu-22.04
+    # runs-on: codspeed-macro-staging
     env:
       BAZEL_ARGS: --config=benchmark --@codspeed//core:codspeed_mode=instrumentation --remote_cache=https://bazel:${{ secrets.BAZEL_CACHE_KEY }}@bazel-remote-cache.devprod.cloudflare.dev
     steps:
