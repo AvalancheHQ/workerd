@@ -62,7 +62,7 @@ jobs:
       - name: Run benchmarks
         uses: CodSpeedHQ/action@v4
         with:
-          mode: walltime
+          mode: instrumentation
           run: ./run_benchmarks.sh
           upload-url: https://api.staging.preview.codspeed.io/upload
 
