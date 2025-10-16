@@ -5,16 +5,24 @@ bazel_dep(name = "platforms", version = "1.0.0")
 bazel_dep(name = "rules_cc", version = "0.2.8")
 
 http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+git_repository = use_repo_rule("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
-http_archive(
+# http_archive(
+#     name = "codspeed",
+#     url = "https://github.com/CodSpeedHQ/codspeed-cpp/archive/bf1acbb12453da6e77cfde674d96adf712bd8d79.tar.gz",
+#     strip_prefix = "codspeed-cpp-bf1acbb12453da6e77cfde674d96adf712bd8d79",
+#     patches = ["codspeed_pr_21.patch"],
+# )
+
+# http_archive(
+#     name = "instrument_hooks",
+#     urls = ["https://github.com/CodSpeedHQ/instrument-hooks/archive/refs/heads/cod-1510-bazel-build-is-broken-on-v130.zip"],
+#     strip_prefix = "instrument-hooks-cod-1510-bazel-build-is-broken-on-v130",
+# )
+
+git_repository(
     name = "codspeed",
-    url = "https://github.com/CodSpeedHQ/codspeed-cpp/archive/bf1acbb12453da6e77cfde674d96adf712bd8d79.tar.gz",
-    strip_prefix = "codspeed-cpp-bf1acbb12453da6e77cfde674d96adf712bd8d79",
-    patches = ["codspeed_pr_21.patch"],
-)
-
-http_archive(
-    name = "instrument_hooks",
-    urls = ["https://github.com/CodSpeedHQ/instrument-hooks/archive/refs/heads/cod-1510-bazel-build-is-broken-on-v130.zip"],
-    strip_prefix = "instrument-hooks-cod-1510-bazel-build-is-broken-on-v130",
+    commit = "ecde42296c51e2e8f59cb7997c3d4736f13494b6",
+    remote = "https://github.com/CodSpeedHQ/codspeed-cpp",
+    recursive_init_submodules = True
 )
