@@ -8,7 +8,7 @@ http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "ht
 
 http_archive(
     name = "codspeed",
-    url = "https://github.com/CodSpeedHQ/codspeed-cpp/archive/ec447a9a0b38de6023fe36cdeab5f4ecdc1ef39b.tar.gz",
-    strip_prefix = "codspeed-cpp-ec447a9a0b38de6023fe36cdeab5f4ecdc1ef39b",
+    url = "https://github.com/CodSpeedHQ/codspeed-cpp/archive/79a3b90.tar.gz",
+    strip_prefix = "codspeed-cpp-79a3b90",
     patches = ["codspeed_pr_21.patch"],
 )
