@@ -10,6 +10,6 @@ http_archive(
     name = "codspeed",
     url = "https://api.github.com/repos/CodSpeedHQ/codspeed-cpp/tarball/cod-1510-bazel-build-is-broken-on-v130",
     patches = ["codspeed_pr_21.patch"],
-    strip_prefix = "CodSpeedHQ-codspeed-cpp-cod-1510-bazel-build-is-broken-on-v130",
+    strip_prefix_regex = "CodSpeedHQ-codspeed-cpp-[a-f0-9]{7}",
     type = "tgz",
 )
