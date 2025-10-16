@@ -8,9 +8,8 @@ http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "ht
 
 http_archive(
     name = "codspeed",
-    url = "https://api.github.com/repos/CodSpeedHQ/codspeed-cpp/tarball/v1.2.0",
+    url = "https://api.github.com/repos/CodSpeedHQ/codspeed-cpp/tarball/cod-1510-bazel-build-is-broken-on-v130",
     patches = ["codspeed_pr_21.patch"],
-    strip_prefix = "CodSpeedHQ-codspeed-cpp-719c41f",
+    strip_prefix = "CodSpeedHQ-codspeed-cpp-cod-1510-bazel-build-is-broken-on-v130",
     type = "tgz",
-    sha256 = "1ced2c2e813313a574f41de9a218f38b53a4114cf7e72ee286801eaba6d8b240",
 )
