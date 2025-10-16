@@ -8,7 +8,13 @@ http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "ht
 
 http_archive(
     name = "codspeed",
-    url = "https://github.com/CodSpeedHQ/codspeed-cpp/archive/faf7fa444bb87d3e96d52a0efb075af5222cef34.tar.gz",
-    strip_prefix = "codspeed-cpp-faf7fa444bb87d3e96d52a0efb075af5222cef34",
+    url = "https://github.com/CodSpeedHQ/codspeed-cpp/archive/bf1acbb12453da6e77cfde674d96adf712bd8d79.tar.gz",
+    strip_prefix = "codspeed-cpp-bf1acbb12453da6e77cfde674d96adf712bd8d79",
     patches = ["codspeed_pr_21.patch"],
+)
+
+http_archive(
+    name = "instrument_hooks",
+    urls = ["https://github.com/CodSpeedHQ/instrument-hooks/archive/refs/heads/cod-1510-bazel-build-is-broken-on-v130.zip"],
+    strip_prefix = "instrument-hooks-cod-1510-bazel-build-is-broken-on-v130",
 )
