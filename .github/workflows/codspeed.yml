@@ -58,9 +58,8 @@ jobs:
           chmod +x run_benchmarks.sh
 
       - name: Run benchmarks
-        uses: CodSpeedHQ/action@v4
+        uses: CodSpeedHQ/action@v3
         with:
-          mode: simulation
           run: ./run_benchmarks.sh
 
       - name: Bazel shutdown
