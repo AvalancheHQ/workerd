@@ -27,7 +27,7 @@ jobs:
     name: Run benchmarks
     runs-on: ubuntu-latest
     env:
-      BAZEL_ARGS: --config=benchmark --@google_benchmark//:codspeed_mode=instrumentation --remote_cache=https://bazel:${{ secrets.BAZEL_CACHE_KEY }}@bazel-remote-cache.devprod.cloudflare.dev
+      BAZEL_ARGS: --config=benchmark --@google_benchmark//:codspeed_mode=instrumentation
     steps:
       - uses: actions/checkout@v4
         with:
