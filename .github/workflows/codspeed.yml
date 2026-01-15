@@ -12,6 +12,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 concurrency:
   group: codspeed.yml-${{ github.event.pull_request.number || github.run_id }}
@@ -24,7 +25,7 @@ permissions:
 jobs:
   benchmarks:
     name: Run benchmarks
-    runs-on: ubuntu-22.04-16core
+    runs-on: ubuntu-latest
     env:
       BAZEL_ARGS: --config=benchmark --@google_benchmark//:codspeed_mode=simulation --remote_cache=https://bazel:${{ secrets.BAZEL_CACHE_KEY }}@bazel-remote-cache.devprod.cloudflare.dev
     steps:
